@@ -1,0 +1,26 @@
+h1 {
+    font-size: 20px !important;
+}
+
+.flex-container {
+    display: flex !important;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: red !important;
+    color: white;
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+select {
+    box-shadow: none !important;
+    border-color: black !important;
+}
+
+.box {
+    height: 400px;
+    width: 450px;
+}

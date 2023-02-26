@@ -8,7 +8,7 @@ const Navbar = () => {
       <li><a><Link to={'/reg'}  >Register</Link></a></li>
     <li><a><Link to={'/app/private'}>Home</Link></a></li>
     <li><a><Link to={'/log'}>Login</Link></a></li>
-    <li style={{float:"right"}}><a className="active" >About</a></li>
+    <li style={{float:"right"}}><a className="active" ><Link to={'/pizz'}>Pizza</Link></a></li>
     </ul>
     </div>
   )
