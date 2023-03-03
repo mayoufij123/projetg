@@ -3,7 +3,7 @@ const cartSchema = mongoose.Schema({
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "users",
-            required: false,
+            required: true,
         },
         cartItem: [{
             pizza: {
@@ -11,7 +11,8 @@ const cartSchema = mongoose.Schema({
                 ref: "pizzas",
                 required: false,
             },
-            quantity: { type: Number, default: 1 }
+            quantity: { type: Number, default: 1 },
+            price: { type: Number, default: 0 }
 
 
         }]
