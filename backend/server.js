@@ -1,5 +1,6 @@
 const express = require('express')
 const pizzaRouter = require('./routes/pizzaRoute')
+const cartRouter = require('./routes/carteRoute')
 
 const userRouter = require('./routes/userRoute')
 var cors = require('cors');
@@ -13,6 +14,7 @@ app.use(express.json())
 require('dotenv').config()
 app.use('/api/pizza', pizzaRouter)
 app.use('/authe/user', userRouter)
+app.use('/api/cart', cartRouter)
 conectdb()
 
 

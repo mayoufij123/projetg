@@ -1,14 +1,28 @@
 import React from 'react'
 import './PizzaCard.css'
 import { useState } from 'react'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 
 function PizzaCard({pizzas}) {
     const [quantity,setQuantity]=useState(1)
     const [varient,setVarient]=useState('small')
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   return (
     <div style={{margin:"100px"}} className='box'>
+      
+      <div onClick={handleShow}>
       <h1>{pizzas.name}</h1>
       <img src={pizzas.image} className="img-fluid" style={{height :"200px" ,width:"200px"}}/>
+      
+  
+      
+      </div>
+      
       <div className='flex-container'>
           <div className="w-100">
 <p> varientes</p>
@@ -33,9 +47,23 @@ function PizzaCard({pizzas}) {
 <button className='btn'>Add to cart</button>
         </div>
       </div>
+      <Modal show={show} className='jalel'>
+    
+      <Modal.Title>  <h1>{pizzas.name} </h1></Modal.Title>
+    
+<img src= {pizzas.image} className="ha" style={{height :"380px" ,width:"300px"}}/>
+    <Modal.Body>
+   <p> {pizzas.description} </p>
+    </Modal.Body>
 
-
-    </div>
+    <Modal.Footer>
+      <button className='btn' onClick={handleClose}> close</button>
+    </Modal.Footer>
+  </Modal>
+  
+  
+      
+  </div>
   )
 }
 

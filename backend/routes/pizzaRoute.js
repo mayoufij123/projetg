@@ -1,27 +1,10 @@
 const express = require('express')
+const { ajoutpizza, getallpizza, modfPizza, deletPizza, uniquePizza } = require('../controllers/pizza')
 const pizzaSchema = require('../models/pizzaModel')
 const pizzaRouter = express.Router()
-pizzaRouter.get('/getpizza', async(req, res) => {
-    try {
-        const pizz = await pizzaSchema.find()
-        res.status(200).send({ msg: 'this is the pizzas list', pizz })
-
-    } catch (err) {
-        res.status(500).send('you have no pizza to get')
-
-    }
-
-})
-pizzaRouter.post('/addpizza', async(req, res) => {
-    try {
-        const NewPizza = new pizzaSchema(req.body)
-        await NewPizza.save()
-        res.status(200).send({ msg: 'you did it the pizza is aded', NewPizza })
-
-    } catch (err) {
-        console.log(err)
-        res.status(500).send('could not add pizza')
-    }
-
-})
+pizzaRouter.get('/getpizza', getallpizza)
+pizzaRouter.post('/addpizza', ajoutpizza)
+pizzaRouter.put('/updatepizza/:id', modfPizza)
+pizzaRouter.delete('/deletepizza/:id', deletPizza)
+pizzaRouter.get('/getpizza/:id', uniquePizza)
 module.exports = pizzaRouter

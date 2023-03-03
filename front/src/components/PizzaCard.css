@@ -24,3 +24,15 @@ select {
     height: 400px;
     width: 450px;
 }
+
+.jalel {
+    margin-top: -520px;
+    width: 450px;
+    margin-left: 550px;
+    background-color: rgb(49, 47, 44);
+    text-align: center;
+}
+
+.ha {
+    margin-top: 10px;
+}
