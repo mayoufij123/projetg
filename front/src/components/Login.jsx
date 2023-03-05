@@ -13,7 +13,7 @@ function Login() {
     const res = await axios.post('http://localhost:5000/authe/user/signin',values)
     await localStorage.setItem('token',res.data.token)
     console.log(res.data.token,res)
-    navigate('/app/Private')
+    navigate('/app/private')
     
     }catch(err){
       

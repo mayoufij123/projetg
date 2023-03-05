@@ -1,16 +1,17 @@
 import React from 'react'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 const Navbar = () => {
+  
   return (
     <div>
       <ul>
-      <li><a><Link to={'/reg'}  >Register</Link></a></li>
-    <li><a><Link to={'/app/private'}> cart<span>0</span> </Link></a></li>
-    <li><a><Link to={'/log'}>Login</Link></a></li>
-    <li style={{float:"right"}}><a className="active" ><Link to={'/pizz'}>Pizza</Link></a></li>
-    
-    </ul>
+      <li><a><Link to={'/'}  >home</Link></a></li>
+       
+       <li><a><Link to={'/reg'}  >Register</Link></a></li>
+       <li style={{float:"right"}}   ><a><Link to={'/log'}>Login</Link></a></li>
+       
+       </ul>
     </div>
   )
 }

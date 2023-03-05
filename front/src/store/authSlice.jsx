@@ -1,21 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import {v4 as uuidv4} from 'uuid'
 
 const authSlice = createSlice({
     name:"authuser",
     initialState:[{
-        id:1,
+        id:uuidv4(),
         name:"jaber",
         email:"bensalah@gmail.com",
         password:"teste123.25",
-        role:"admin"
+        role:"user"
     }],
     reducers:{
-        setContacts:(state,action)=>{
+        setAuth:(state,action)=>{
             return action.payload
         }
     }
 })
 
-export const {setauth} = authSlice.actions
+export const {setAuth} = authSlice.actions
 export default authSlice.reducer

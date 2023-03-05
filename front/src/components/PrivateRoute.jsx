@@ -1,36 +1,45 @@
 import React from 'react'
 import { useEffect } from "react";
+import {useSelector} from 'react-redux'
 import { useNavigate } from 'react-router';
-import {useDispatch,useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import User from '../components/user/User'
 import Admin from '../components/admin/Admin'
-import { setauth} from '../store/authSlice'
+import { setAuth} from '../store/authSlice'
 import {fetchAccount} from '../api/auth'
+import Login from './Login';
 function PrivateRoute() {
-    const dispatch = useDispatch()
-    const auth = useSelector(state=>state.authuser)
-    console.log('lina redux auth',auth)
-    const getAccout=async()=>{
-        const data = await fetchAccount()
-        console.log("data",data)
-        dispatch( setauth(data))
-      }
-      useEffect(()=>{
-        getAccout()
-        },[])
-        const logout=()=>{
-            localStorage.removeItem('token')
-            navigate('/login')
-          }
-        const token = localStorage.getItem('token')
-console.log('token el user specifique ', token )
+  const auth=useSelector(state=>state.authuser)
+  console.log('auth',auth)
 
-    const navigate = useNavigate()
-  return (
-    <div>
+const dispatch=useDispatch()
+  const getAuth=async()=>{
+    const data=await fetchAccount()
+    console.log(data,'data account')
+    dispatch(setAuth(data))
+  }
+  useEffect(()=>{
+    getAuth()
+  },[])
+  const token = localStorage.getItem('token')
+  console.log('token',token)
+const navigation=useNavigate()
+const navigate = useNavigate()
+
+const logout=()=>{
+  localStorage.removeItem('token')
+  navigate('/log')
+}
+
+
+
+  return(
+  <div>
+    { token  ? (  auth.role === "admin" ? (<Admin  auth={auth}  logout={logout}   /> ):( <User   auth={auth}/>)  ) : (<Login/>)}
     
-    {auth.role === "admin" ? (<Admin  auth={auth} /> ):( <User   auth={auth}/>) } {}  
-    </div>
+    
+
+  </div>
   )
 }
 

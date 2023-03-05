@@ -5,6 +5,6 @@ export const postContact = async(values)=>{
 }
 export const fetchAccount =async()=>{
     const token=localStorage.getItem('token');
-    const {data} = await axios.get('http://localhost:5000/authe/user/getaUser',{headers:{Authorization:token}} );
+    const {data} = await axios.get('http://localhost:5000/authe/user/getaUser',{headers:{Authorized:token}} );
     return data 
 }
