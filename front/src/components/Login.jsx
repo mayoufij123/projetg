@@ -8,10 +8,14 @@ function Login() {
   const navigate = useNavigate()
      const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
+    
   const handelLogin=async(values)=>{
     try{
     const res = await axios.post('http://localhost:5000/authe/user/signin',values)
+    
+
     await localStorage.setItem('token',res.data.token)
+    
     console.log(res.data.token,res)
     navigate('/app/private')
     

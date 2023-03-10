@@ -8,9 +8,9 @@ import PizzaCard from './PizzaCard'
 import './Pizza.css'
 
 
-function Pizza() {
-    const authpizza=useSelector(state=>state.authpizza)
-    console.log('pizza',authpizza)
+function Pizza({userId}) {
+    const authpizza= useSelector(state=>state.authpizza)
+    console.log('pizza111111111111',authpizza)
     const dispatch=useDispatch()
     const getPizza=async()=>{
         const data= await fetchPizza()
@@ -25,7 +25,7 @@ getPizza()
   return (
     <div className='produit'>
         {
-        authpizza.map((e)=> <PizzaCard pizzas={e}/> )
+        authpizza.map((e)=> <PizzaCard pizzas={e} userId={userId}/> )
       }
       
     </div>

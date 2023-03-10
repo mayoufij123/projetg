@@ -7,7 +7,7 @@ const pizzaSchema = mongoose.Schema({
         description: String,
         image: String,
 
-    }
+    }, { timestamps: true }
 
 )
 module.exports = mongoose.model('pizzas', pizzaSchema)

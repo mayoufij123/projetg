@@ -10,7 +10,7 @@ import {fetchAccount} from '../api/auth'
 import Login from './Login';
 function PrivateRoute() {
   const auth=useSelector(state=>state.authuser)
-  console.log('auth',auth)
+  // console.log('auth',auth)
 
 const dispatch=useDispatch()
   const getAuth=async()=>{
@@ -23,6 +23,9 @@ const dispatch=useDispatch()
   },[])
   const token = localStorage.getItem('token')
   console.log('token',token)
+  
+  const userId=auth._id
+  console.log('userId',userId)
 const navigation=useNavigate()
 const navigate = useNavigate()
 
@@ -35,7 +38,7 @@ const logout=()=>{
 
   return(
   <div>
-    { token  ? (  auth.role === "admin" ? (<Admin  auth={auth}  logout={logout}   /> ):( <User   auth={auth}/>)  ) : (<Login/>)}
+    { token  ? (  auth.role === "admin" ? (<Admin  auth={auth}  logout={logout}   /> ):( <User   auth={auth} userId={auth._id}/>)  ) : (<Login/>)}
     
     
 

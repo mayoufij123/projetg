@@ -6,4 +6,5 @@ export const fetchContacts = async() => {
 }
 export const DeleteContact = async(id, values) => {
     const deleteduser = await axios.delete(`http://localhost:5000/authe/user/deleteuser/${id}`, { values })
+    
 }
