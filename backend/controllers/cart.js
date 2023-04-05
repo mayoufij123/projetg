@@ -2,7 +2,6 @@ const cartSchema = require('../models/cartModel')
 exports.Addtocart = (req, res) => {
     cartSchema.findOne({ user: req.user._id })
         .exec((err, newCart) => {
-
             if (err) { return res.status(400).json({ msg: 'wrong' }); }
             if (newCart) {
                 const product = req.body.cartItem.pizza
