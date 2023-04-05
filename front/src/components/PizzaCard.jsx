@@ -5,18 +5,28 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import axios  from 'axios';
 
-function PizzaCard({pizzas,userId}) {
+function PizzaCard({pizzas}) {
     const [quantity,setQuantity]=useState(1)
-    const [varient,setVarient]=useState('small')
+    const [varients,setVarients]=useState('small')
     const [show, setShow] = useState(false);
-
+const[cart,setCart]=useState([])
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
+  const Handelclik=(pizzas)=>{
+   let isPresent=false;
+   cart.forEach((product) => {
+    if(pizzas.id===product.id)
+    isPresent=true
+   })
+   if(isPresent){
+
+   }setCart([...cart,pizzas]);
+
+  }
     
     const choicePizza = async(pizzasId) => {
      const _pizzasId=pizzasId
-    //userId=userId
+    const userId=userId
      const quantity=1
      const price =1
 
@@ -65,7 +75,7 @@ console.log(res.data.token,res)
    // }
 
   return (
-    <div style={{margin:"100px"}} className='box'>
+    <div style={{margin:"50px" }} className='box'>
       
       <div onClick={handleShow}>
       <h1>{pizzas.name}</h1>
@@ -79,8 +89,8 @@ console.log(res.data.token,res)
       <div className='flex-container'>
           <div className="w-100">
 <p> varientes</p>
-<select value={varient} onChange={(e)=>{setVarient(e.target.value)}}>
-    {pizzas.varients.map(varient=>{ return   <option value={varient}>{varient}</option>   })}
+<select value={varients} onChange={(e)=>{setVarients(e.target.value)}} className='vart'>
+       {pizzas.varients.map(varient=>{ return   <option value={varient} id='opt'>{varient}</option>   })}
 </select>
                 </div>
          <div className="w-100">
@@ -94,10 +104,10 @@ console.log(res.data.token,res)
       </div>
       <div className="flex-container">
         <div className='m-1 w-100'>
-<h1>Price:{pizzas.prices[0][varient]*quantity}</h1>
+<h1>Price:{pizzas.prices[0][varients]*quantity}</h1>
         </div>
         <div className='m-1 w-100'>
-<button className='btn'  onClick={()=>choicePizza(pizzas._id)}>
+<button className='btn'  onClick={choicePizza}>
   {/* - excetute fnc get el product , send to cart  backend  */}
   Add to cart</button>
         </div>

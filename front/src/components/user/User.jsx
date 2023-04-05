@@ -1,12 +1,12 @@
 import React from 'react'
 import Pizza from '../Pizza'
 
-function User({auth,userId}) {
+function User({auth}) {
   return (
     <div>
       <h1>{auth.name}</h1>
  
-        <Pizza  userId={userId}/>
+        <Pizza/>
     </div>
   )
 }

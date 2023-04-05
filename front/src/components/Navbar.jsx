@@ -4,9 +4,9 @@ import { Link, } from 'react-router-dom'
 const Navbar = ({size}) => {
 
   return (
-    <div>
+    <div className='nav'>
       <ul>
-      <li><a><Link to={'/'}  >home</Link></a></li>
+      <li><a><Link to={'/'}  >Pizza</Link></a></li>
        
        <li><a><Link to={'/reg'}  >Register</Link></a></li>
        <li style={{float:"right"}}   ><a><Link to={'/log'}>Login</Link></a></li>

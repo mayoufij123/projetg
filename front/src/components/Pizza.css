@@ -1,4 +1,9 @@
 .produit {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px;
+    background-image: url('https://cdn.sortiraparis.com/images/80/97230/727210-restaurant-zapi-pizzeria-italienne-a-paris.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

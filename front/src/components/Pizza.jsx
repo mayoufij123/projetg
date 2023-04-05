@@ -8,7 +8,7 @@ import PizzaCard from './PizzaCard'
 import './Pizza.css'
 
 
-function Pizza({userId}) {
+function Pizza() {
     const authpizza= useSelector(state=>state.authpizza)
     console.log('pizza111111111111',authpizza)
     const dispatch=useDispatch()
@@ -25,7 +25,7 @@ getPizza()
   return (
     <div className='produit'>
         {
-        authpizza.map((e)=> <PizzaCard pizzas={e} userId={userId}/> )
+        authpizza.map((e)=> <PizzaCard pizzas={e} /> )
       }
       
     </div>

@@ -24,8 +24,7 @@ const dispatch=useDispatch()
   const token = localStorage.getItem('token')
   console.log('token',token)
   
-  const userId=auth._id
-  console.log('userId',userId)
+  
 const navigation=useNavigate()
 const navigate = useNavigate()
 
@@ -38,7 +37,7 @@ const logout=()=>{
 
   return(
   <div>
-    { token  ? (  auth.role === "admin" ? (<Admin  auth={auth}  logout={logout}   /> ):( <User   auth={auth} userId={auth._id}/>)  ) : (<Login/>)}
+    { token  ? (  auth.role === "admin" ? (<Admin  auth={auth}  logout={logout}   /> ):( <User   auth={auth} />)  ) : (<Login/>)}
     
     
 
