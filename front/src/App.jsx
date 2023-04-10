@@ -8,6 +8,7 @@ import Register from './components/Register';
 import {Routes,Route} from 'react-router-dom';
 import Pizza from './components/Pizza';
 import { useState } from 'react';
+
 function App() {
   const [cart,setCart]=useState([])
   return (
@@ -19,6 +20,11 @@ function App() {
             <Route path={'/reg'}   element={<Register/>}/>
             <Route path={'/log' } element={<Login/>}/>  
             <Route path={'/app/private'} element={<PrivateRoute/>}/>
+                                                           
+            
+            
+
+
       </Routes>
 
 

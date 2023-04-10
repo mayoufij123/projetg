@@ -5,22 +5,29 @@
 }
 
 .left {
-    margin-right: 1450px;
     background: rebeccapurple;
     position: fixed;
     width: 190px;
     margin-top: 100px;
 }
 
+.jk {
+    color: brown;
+    position: absolute;
+    margin-left: 250px;
+}
+
+.ba {
+    margin-top: 110px;
+}
+
+.p {
+    margin-top: 500px;
+}
+
 .left a {
     display: block;
     margin: 20px;
-}
-
-.prd {
-    display: flex;
-    margin: 350px;
-    margin-right: -1000px;
 }
 
 a {
@@ -33,10 +40,15 @@ a:hover {
 }
 
 .ajou {
-    margin-left: 500px;
-    margin-top: -200px;
-    position: absolute;
+    margin-left: 100px;
+    margin-top: 20px;
     text-align: center;
+}
+
+.pp {
+    margin: 10px;
+    margin-top: -500px;
+    margin-left: 100px;
 }
 
 ;
