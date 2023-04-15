@@ -52,12 +52,17 @@ getPizza()
   return (
     <div className='jk' >
       <div className='ba'>
+        <h1 className='h1'>list contact</h1>
     {contact.map((e)=><ListContact contacts={e}  />)}
     
+
+    <section>
+      
     
     <div className='ajou' id='add'>
+     
          <div className='cd'>
-          <h2 className='h2'> ajout product</h2>
+          <h2 className='h2'> add product</h2>
           <button className='bout' onClick={()=>AddProduit({name,description,prices,image,category})}>add</button>
           </div>
           <div className='inp'>
@@ -78,6 +83,7 @@ getPizza()
           
          </div>
          </div>
+         </section>
 <div className='pp'>
           {
         authpizza.map((e)=> <Products  paz={e}  /> )

@@ -20,11 +20,6 @@ function App() {
             <Route path={'/reg'}   element={<Register/>}/>
             <Route path={'/log' } element={<Login/>}/>  
             <Route path={'/app/private'} element={<PrivateRoute/>}/>
-                                                           
-            
-            
-
-
       </Routes>
 
 

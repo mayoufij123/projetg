@@ -11,10 +11,23 @@
     margin-top: 100px;
 }
 
+.h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -700px;
+    color: black;
+    font-size: large;
+}
+
+.h2 {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .jk {
     color: brown;
     position: absolute;
     margin-left: 250px;
+    z-index: -1;
 }
 
 .ba {
@@ -81,7 +94,12 @@ input {
 }
 
 .cd {
-    display: flex;
+    display: block;
+    margin-left: -450px;
+}
+
+.sc {
+    padding: 50px;
 }
 
 .bout {
