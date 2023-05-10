@@ -35,10 +35,12 @@ function Admin() {
  
   const [description,setDescription]=useState('')
   const [category,setCategory]=useState('')
-  const [prices,setPrices]=useState({})
+  const[ varients ,setVarients]=useState(["Small","Medium","Large"])
+  const [prices,setPrices]=useState({Small:0, Medium: 0, Large: 0 })
   const [image,setImage]=useState('')
   const authpizza= useSelector(state=>state.authpizza)
     
+  console.log("variant", varients)
     const getPizza=async()=>{
         const data= await fetchPizza()
     
@@ -63,21 +65,21 @@ getPizza()
      
          <div className='cd'>
           <h2 className='h2'> add product</h2>
-          <button className='bout' onClick={()=>AddProduit({name,description,prices,image,category})}>add</button>
+          <button className='bout' onClick={()=>AddProduit({name,description,prices,image,category,varients})}>add</button>
           </div>
           <div className='inp'>
           <input type="text"  placeholder='name' value={name} onChange={(e)=>setName(e.target.value)}  />
           
-          <select name="" id="list"  >
-            <option >small</option>
-            <option >meduim</option>
-            <option >large</option>
-          </select>
+          <input type="text"  placeholder='variant1' value={varients[0]} onChange={(e)=>setVarients(e.target.value)}  />
+          <input type="text"  placeholder='variant2' value={varients[1]} onChange={(e)=>setVarients(e.target.value)}  />
+          <input type="text"  placeholder='variant3' value={varients[2]} onChange={(e)=>setVarients(e.target.value)}  />
           
           <input type="text"  placeholder='description' value={description}    onChange={(e)=>setDescription(e.target.value)}/>
            <input type="text"  placeholder='categorie' value={category} onChange={(e)=>setCategory(e.target.value)} />
            
-           <input type="text" placeholder='prices'  value={prices} onChange={(e)=>setPrices(e.target.value)} />
+           <input type="text" placeholder='prices large'  value={prices.Large} onChange={(e)=>setPrices(e.target.value,0 , 0)} />
+           <input type="text" placeholder='prices medium'  value={prices.Medium} onChange={(e)=>setPrices(0, e.target.value, 0)} />
+           <input type="text" placeholder='prices small'  value={prices.Small} onChange={(e)=>setPrices(0, 0, e.target.value)} />
            <input type="text" placeholder='image'  value={image} onChange={(e)=>setImage(e.target.value)} />
 
           

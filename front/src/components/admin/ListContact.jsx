@@ -7,7 +7,8 @@ const ListContact = ({contacts}) => {
   
     const handleDeleteUser = async (id) => {
       await DeleteContact(id);
-      setUsers(users.filter(user => user.id !== id));
+      
+      window.location.reload();
     }
   
 

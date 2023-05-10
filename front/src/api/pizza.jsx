@@ -5,5 +5,9 @@ export const fetchPizza = async()=>{
 
 }
 export const PostPizza= async(values)=>{
+
+    console.log("values")
+    console.log(values)
+
     const addingContact= await axios.post('http://localhost:5000/api/pizza/addpizza',{...values})
 }
