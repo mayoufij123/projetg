@@ -1,6 +1,4 @@
 const pizzaSchema = require('../models/pizzaModel')
-
-
 exports.ajoutpizza = async(req, res) => {
     try {
         const NewPizza = new pizzaSchema(req.body)
