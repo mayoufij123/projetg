@@ -38,9 +38,9 @@ function Admin() {
   const[ varients ,setVarients]=useState(["Small","Medium","Large"])
   const [prices,setPrices]=useState({Small:0, Medium: 0, Large: 0 })
   const [image,setImage]=useState('')
+  
   const authpizza= useSelector(state=>state.authpizza)
-    
-  console.log("variant", varients)
+    console.log("variant", varients)
     const getPizza=async()=>{
         const data= await fetchPizza()
     
