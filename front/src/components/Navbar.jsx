@@ -6,8 +6,9 @@ const Navbar = ({size}) => {
   return (
     <div className='nav'>
       <ul>
-      <li><a><Link to={'/'}  >Pizza</Link></a></li>
-       
+      <li><a><Link to={'/'}  >Livrable</Link></a></li>
+      <li><a><Link to={'/produit non livrable'}  >Pizza</Link></a></li>
+     
        <li><a><Link to={'/reg'}  >Register</Link></a></li>
        <li style={{float:"right"}}   ><a><Link to={'/log'}>Login</Link></a></li>
        <li style={{float:"right"}}   ><a><Link to={'/cart'}>cart</Link><span>{size}</span></a></li>

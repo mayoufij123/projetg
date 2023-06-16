@@ -4,51 +4,47 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import axios  from 'axios';
+import { useParams } from 'react-router';
+import { useNavigate } from 'react-router';
 
 function PizzaCard({pizzas}) {
+  const navigate=useNavigate()
+  const {id}=useParams()
+  const hh=pizzas._pizzasId
+  console.log(hh)
+  
+
     const [quantity,setQuantity]=useState(1)
     const [varients,setVarients]=useState('small')
     const [show, setShow] = useState(false);
 const[cart,setCart]=useState([])
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  const Handelclik=(pizzas)=>{
-   let isPresent=false;
-   cart.forEach((product) => {
-    if(pizzas.id===product.id)
-    isPresent=true
-   })
-   if(isPresent){
+ // const Handelclik=(pizzas)=>{
+   //let isPresent=false;
+   //cart.forEach((product) => {
+    //if(pizzas.id===product.id)
+    //isPresent=true
+  // })
+   //if(isPresent){
 
-   }setCart([...cart,pizzas]);
+  // }setCart([...cart,pizzas]);
 
-  }
+  //}
     
-    const choicePizza = async(pizzasId) => {
-     const _pizzasId=pizzasId
-    const userId=userId
-     const quantity=1
-     const price =1
-
-console.log({pizzasId:_pizzasId,quantity,price})
-const data={pizzasId:_pizzasId,quantity,price}
-try{const res = await axios.post('http://localhost:5000/api/cart/createcart',data)   
+  //  const choicePizza = async(pizzasId) => {
+  // const _pizzasId=pizzasId
     
-await localStorage.getItem('token',res.data.token)
-    
-console.log(res.data.token,res)
+ // const quantity=1
+    const price =1
 
-}
-
-
-    
-    
-    catch(err){
-      
-  console.log(err)
-  }
-
-}
+//console.log({_pizzasId,quantity,price})
+//const data={_pizzasId,quantity,price}
+//console.log( 'ici data',data)
+//navigate('/cart')
+//const arry=Object.values(data);
+//console.log(arry)
+//}
 
 
 
@@ -104,12 +100,14 @@ console.log(res.data.token,res)
       </div>
       <div className="flex-container">
         <div className='m-1 w-100'>
-<h1>Price:{pizzas.prices[0][varients]*quantity}</h1>
+    <h1>Price:{pizzas.prices[0][varients]*quantity}</h1>
         </div>
         <div className='m-1 w-100'>
-<button className='btn'  onClick={choicePizza}>
+          
+    <button    className='btn'   >
   {/* - excetute fnc get el product , send to cart  backend  */}
   Add to cart</button>
+
         </div>
       </div>
       <Modal show={show} className='jalel'>

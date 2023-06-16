@@ -1,0 +1,37 @@
+.img3 {
+    width: 10px;
+}
+
+.ll {
+    background-color: aquamarine;
+    margin: 0 auto;
+    margin-top: 6px;
+    margin: 60px;
+}
+
+.slick-slide>div {
+    margin: 0 8px;
+}
+
+.slick-list {
+    margin: 0 -8px;
+}
+
+.card {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: black;
+    overflow: hidden;
+    height: 600px;
+    color: #fff;
+}
+
+.card-top h1 {
+    font-size: 1rem;
+}
+
+.card-top img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
