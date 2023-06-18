@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { getUniquepizzar } from '../api/pizza'
 import { useParams } from 'react-router'
+import './Cart.css'
 
-const Cart = ({cart,setCart}) => {
+const Cart = ({cart,setCart,HandelChange}) => {
+    const [prices,setPrices]=useState(0)
     
-    
+ let HandelPrice=()=>{
+  let ans=0;
+  cart.map((item)=>{
+    ans += item.amount*item.prices
+  })
+  setPrices(ans)
+ }
+ let HandelRemouve=(id)=>{
+  const arr= cart.filter((item)=>item.id!=id);
+    setCart(arr);
+    //HandelPrice()
+ }
  
+ useEffect(()=>{
+HandelPrice();
+ })
   return (
-    <article style={{paddingTop:'200px'}}>
+    <article style={{paddingTop:'80px'}}>
 
         {cart.map((item)=>(
         <div className='cart_box' key={item.id}>
@@ -15,13 +31,14 @@ const Cart = ({cart,setCart}) => {
         <img src={item.image}/>
         <p>{item.name}</p>
         </div>
-        <div>
-          <button>+</button>
-          <button>-</button>
+        <div className='but'>
+          <button onClick={()=>HandelChange(item,+1)}>+</button>
+          <button>{item.amount}</button>
+          <button onClick={()=>HandelChange(item,-1)}>-</button>
         </div>
-        <div>
+        <div className='ya'>
          <span>{item.prices}</span> 
-          <button>remove</button>
+          <button id='re' onClick={()=>HandelRemouve(item.id)}    >remove</button>
         </div>
         </div>
         ))}
@@ -29,6 +46,7 @@ const Cart = ({cart,setCart}) => {
     
     <div>
       <span>totalprice</span>
+      <span>Rs -{prices}</span>
     </div>
      </article>
   )

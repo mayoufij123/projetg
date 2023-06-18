@@ -7,6 +7,7 @@
       category: "veg",
       image:"https://media-cdn.tripadvisor.com/media/photo-s/17/e2/d4/a1/gourmand.jpg",
       description: "Classic delight with 100% real mozzarella cheese",
+      amount:1
     },
     {
         id:2,
@@ -17,6 +18,7 @@
       image: "https://media-cdn.tripadvisor.com/media/photo-s/17/2e/c7/eb/escalope-de-veau.jpg",
       description:
         "Delightful combination of onion, capsicum, tomato & grilled mushroom",
+        amount:1
     },
     {
         id:3,
@@ -27,6 +29,7 @@
       description:
         "The awesome foursome! Golden corn, black olives, capsicum, red paprika",
       image: "https://static.750g.com/images/1200-630/4b4c2c9c149f4f59c4a914df44278d41/couscous-tunisien.jpeg",
+      amount:1
     },
     {
         id:4,
@@ -37,6 +40,7 @@
       image: "https://img.cuisineaz.com/660x660/2013/12/20/i4453-couscous-tunisien-legumes-viande.jpeg",
       description:
         "Double pepper barbecue chicken, golden corn and extra cheese, true delight",
+        amount:1
     },
     {
         id:5,
@@ -45,7 +49,7 @@
       prices: 36,
       category: "nonveg",
       image: "https://cuisinea4mains.files.wordpress.com/2018/02/couscous-tunisien-au-poisson4-cuisine-c3a0-4-mains.jpg",
-        
+      amount:1
     },
     {
         id:6,
@@ -56,6 +60,7 @@
       image: "https://lesucresale-doumsouhaib.com/wp-content/uploads/2020/04/p%C3%A2te-tunisienne-%C3%A0-la-sauce-piquante-makrouna.jpg",
       description:
         "The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo",
+       amount:1
     },
   ];
    
