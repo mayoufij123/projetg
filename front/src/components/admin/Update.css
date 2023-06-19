@@ -1,0 +1,17 @@
+    .ipt {
+        width: 100px;
+    }
+    
+    .prc {
+        display: flex;
+        margin: 50px;
+    }
+    
+    .updat {
+        border: 8px solid black;
+        width: 500px;
+        height: 500px;
+        margin-left: 500px;
+        margin-top: 30px;
+        background-color: rgba(245, 245, 220, 0.378);
+    }

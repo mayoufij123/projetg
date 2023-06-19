@@ -1,6 +1,7 @@
 import React,{ useEffect, useState }  from 'react'
 import { useNavigate, useParams } from 'react-router'
-import { updatepizzas,getUniquepizzar } from '../api/pizza'
+import { updatepizzas,getUniquepizzar } from '../../api/pizza'
+import './Update.css'
 const Update = () => {
  
 
@@ -25,13 +26,13 @@ const Update = () => {
   const[ varients ,setVarients]=useState(["Small","Medium","Large"])
   const [prices,setPrices]=useState({Small:10, Medium: 0, Large: 0 })
   return (
-    <div>
+    <div className='updat'>
      
-   <label >
     name:
-    <input type="text"  name='name' value={name}  onChange={(e) => setName(e.target.value )} />
-   </label>
-   <input
+  
+    <input className='ipt' type="text"  name='name' value={name}  onChange={(e) => setName(e.target.value )} />
+ varients:
+   <input 
   type="text"
   placeholder="variant1"
   value={varients[0]}
@@ -47,7 +48,7 @@ const Update = () => {
       [updatedVariants[0]]: prices[updatedVariants[0]]
     });
   }}
-/>
+  className='ipt'/>
 
 <input
   type="text"
@@ -65,7 +66,7 @@ const Update = () => {
       [updatedVariants[1]]: prices[updatedVariants[1]]
     });
   }}
-/>
+  className='ipt'/>
 <input
   type="text"
   placeholder="variant3"
@@ -82,31 +83,35 @@ const Update = () => {
       [updatedVariants[2]]: prices[updatedVariants[2]]
     });
   }}
-/>
-   <label >
-   
+  className='ipt'/>
+  
+
+
+<div className=' prc'>
    <input
   type="text"
   placeholder="prices large"
   value={prices[varients[2]]}
   onChange={(e) => setPrices({ ...prices, [varients[2]]: e.target.value })}
-/>
+  className='ipt'/>
 
 <input
   type="text"
   placeholder="prices medium"
   value={prices[varients[1]]}
   onChange={(e) => setPrices({ ...prices, [varients[1]]: e.target.value })}
-/>
+  className='ipt'/>
 
 <input
   type="text"
   placeholder="prices small"
   value={prices[varients[0]]}
   onChange={(e) => setPrices({ ...prices, [varients[0]]: e.target.value })}
-/>
-   </label>
-   <button onClick={()=>HandelModf(id,{name,prices})}>update</button>
+  className='ipt'/>
+ 
+   </div>
+   
+   <button onClick={()=>HandelModf(id,{name,prices})} className='ipt'>update</button>
     </div>
 
   )

@@ -36,7 +36,7 @@ const[cart,setCart]=useState([])
   // const _pizzasId=pizzasId
     
  // const quantity=1
-    const price =1
+    //const price =1
 
 //console.log({_pizzasId,quantity,price})
 //const data={_pizzasId,quantity,price}
@@ -100,13 +100,11 @@ const[cart,setCart]=useState([])
       </div>
       <div className="flex-container">
         <div className='m-1 w-100'>
-    <h1>Price:{pizzas.prices[0][varients]*quantity}</h1>
+    <h1 className='ju'>Price:{pizzas.prices[0][varients]*quantity}</h1>
         </div>
         <div className='m-1 w-100'>
           
-    <button    className='btn'   >
-  {/* - excetute fnc get el product , send to cart  backend  */}
-  Add to cart</button>
+    
 
         </div>
       </div>

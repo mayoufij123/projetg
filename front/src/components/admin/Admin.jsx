@@ -36,7 +36,7 @@ function Admin() {
   const [description,setDescription]=useState('')
   const [category,setCategory]=useState('')
   const[ varients ,setVarients]=useState(["Small","Medium","Large"])
-  const [prices,setPrices]=useState({Small:10, Medium: 0, Large: 0 })
+  const [prices,setPrices]=useState({Small:10, Medium: 1, Large: 1 })
   const [image,setImage]=useState('')
   
   const authpizza= useSelector(state=>state.authpizza)
@@ -56,7 +56,7 @@ getPizza()
       <div className='ba'>
         <h1 className='h1'>list contact</h1>
     {contact.map((e)=><ListContact contacts={e}  />)}
-    
+    <hr />
 
     <section>
       
@@ -150,8 +150,13 @@ getPizza()
           
          </div>
          </div>
+      
          </section>
+     
+        
 <div className='pp'>
+<hr />
+<h1 id='h2'>list pizza</h1>
           {
         authpizza.map((e)=> <Products  paz={e}  /> )
          }

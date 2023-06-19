@@ -12,21 +12,31 @@ function Products({paz}) {
   console.log(prop)
  // const navigateProduit=()=>{
    // navigate(`/updatepizza/${paz._id}`)
+
  // }
+ //const PrintBtn= document.getElementById('print')
+// PrintBtn.addEventListener('click',function () {
+// print();
+
+// })
+ 
 
   return (
 
     <div>
 
 <div className='prd' >
-        <input type="text" value={paz.name}  onChange={(e)=>setName(e.target.value)} />
+  
+        <input type="text" value={paz.name} className='oo'  onChange={(e)=>setName(e.target.value)} />
         
-        <input type='text' value={paz.prices.map((obj) => JSON.stringify(obj)).join(', ')} onChange={(e) => setPrices(e.target.value )} />
-        
+        <input type='text'className='oo'  value={paz.prices.map((obj) => JSON.stringify(obj)).join(', ')} onChange={(e) => setPrices(e.target.value )} />
+        <div className='pt'>
         <Link to = {`/updatepizza/${paz._id}`}> <button>update</button> </Link>
-        <button>delete</button>
         </div>
+        <button id='nn'>delete</button>
       
+        </div>
+        
     </div>
   )
 }

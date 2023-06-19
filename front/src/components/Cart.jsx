@@ -18,12 +18,17 @@ const Cart = ({cart,setCart,HandelChange}) => {
     setCart(arr);
     //HandelPrice()
  }
+ const PrintBtn= document.getElementById('print')
+PrintBtn.addEventListener('click',function () {
+window.print();
+
+})
  
  useEffect(()=>{
 HandelPrice();
  })
   return (
-    <article style={{paddingTop:'80px'}}>
+    <article style={{paddingTop:'30px'}}>
 
         {cart.map((item)=>(
         <div className='cart_box' key={item.id}>
@@ -44,10 +49,11 @@ HandelPrice();
         ))}
 
     
-    <div>
+    <div className='pri'>
       <span>totalprice</span>
       <span>Rs -{prices}</span>
     </div>
+    <button id ='print'>print commande</button>
      </article>
   )
 }

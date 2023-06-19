@@ -34,6 +34,28 @@ article {
 
 .but {
     width: 80px;
+    display: flex;
+    margin: 20px;
+}
+
+.pri {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pri span {
+    font-size: large;
+    color: black;
+    font-weight: 300px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.but button {
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    padding: 8px;
 }
 
 #re {

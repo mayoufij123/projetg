@@ -8,10 +8,11 @@ import Register from './components/Register';
 import {Routes,Route} from 'react-router-dom';
 import Pizza from './components/Pizza';
 import { useState } from 'react';
-import Update from './components/Update';
+
 import { useNavigate } from 'react-router-dom';
 import Cart from './components/Cart';
 import Livrable from './components/livrable/Livrable';
+import Update from './components/admin/Update';
 
 
 function App() {

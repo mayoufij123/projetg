@@ -23,6 +23,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+hr {
+    margin-left: -350px;
+    border: solid;
+    margin-top: 20px;
+}
+
 .jk {
     color: brown;
     position: absolute;
@@ -31,7 +37,7 @@
 }
 
 .ba {
-    margin-top: 110px;
+    margin-top: 30px;
 }
 
 .p {
@@ -54,13 +60,13 @@ a:hover {
 
 .ajou {
     margin-left: 100px;
-    margin-top: 20px;
+    margin-top: 100px;
     text-align: center;
 }
 
 .pp {
     margin: 10px;
-    margin-top: -200px;
+    margin-top: -300px;
     margin-left: 100px;
 }
 
@@ -113,4 +119,9 @@ input {
 .varte {
     height: 50px;
     width: 200px;
+}
+
+#h2 {
+    margin-top: 50px;
+    margin-left: -800px;
 }
