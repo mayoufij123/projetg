@@ -11,7 +11,7 @@ const Navbar = ({size}) => {
      
        <li><a><Link to={'/reg'}  >Register</Link></a></li>
        <li style={{float:"right"}}   ><a><Link to={'/log'}>Login</Link></a></li>
-       <li style={{float:"right"}}   ><a><Link to={'/cart'}>cart</Link><span>{size}</span></a></li>
+       <li style={{float:"right"}}   ><a><Link to={'/cart'}>cart</Link><span id='spa' >{size}</span></a></li>
        </ul>
     </div>
   )

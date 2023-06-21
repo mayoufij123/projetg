@@ -1,11 +1,18 @@
 import React ,{useState} from 'react'
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
-
+import {Deletepizza} from '../../api/pizza'
 import './Products.css'
 
 function Products({paz}) {
   const navigate = useNavigate()
+  const handleDeltepizza = async (id) => {
+    await Deletepizza (id);
+    
+    window.location.reload();
+    
+  }
+ 
   const [prices,setPrices]=useState({Small:10, Medium: 0, Large: 0 })
   const[name,setName]=useState('')
   const prop=paz.prices
@@ -33,7 +40,7 @@ function Products({paz}) {
         <div className='pt'>
         <Link to = {`/updatepizza/${paz._id}`}> <button>update</button> </Link>
         </div>
-        <button id='nn'>delete</button>
+        <button id='nn' onClick={()=>handleDeltepizza()}>delete</button>
       
         </div>
         

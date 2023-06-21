@@ -3,7 +3,7 @@
         id:1,
       name: "Margherita",
       varients: ["small", "medium", "large"],
-      prices: 50,
+      prices: 80,
       category: "veg",
       image:"https://media-cdn.tripadvisor.com/media/photo-s/17/e2/d4/a1/gourmand.jpg",
       description: "Classic delight with 100% real mozzarella cheese",
@@ -48,7 +48,7 @@
       varients: ["small", "medium", "large"],
       prices: 36,
       category: "nonveg",
-      image: "https://cuisinea4mains.files.wordpress.com/2018/02/couscous-tunisien-au-poisson4-cuisine-c3a0-4-mains.jpg",
+      image: "https://media-cdn.tripadvisor.com/media/photo-s/0d/a4/2e/44/un-restaurant-trop-bon.jpg",
       amount:1
     },
     {
@@ -62,5 +62,36 @@
         "The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo",
        amount:1
     },
+    {
+      id:7,
+    name: "Chicken Golden Delight",
+    varients: ["small", "medium", "large"],
+    prices: 20,
+    category: "nonveg",
+    image: "https://img-4.linternaute.com/hIUqksTpI9ugou2LfQ02Mf_Gr44=/fit-in/550x550/00c21a4d2a034476b495b7e2c2f27f9a/restaurant/47967.jpg",
+    description:
+      "Double pepper barbecue chicken, golden corn and extra cheese, true delight",
+      amount:1
+  },
+  {
+      id:5,
+    name: "Chicken Pepperoni",
+    varients: ["small", "medium", "large"],
+    prices: 36,
+    category: "nonveg",
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0d/a4/2e/44/un-restaurant-trop-bon.jpg",
+    amount:1
+  },
+  {
+      id:6,
+    name: "Indi Chicken Tikka",
+    varients: ["small", "medium", "large"],
+    prices: 28,
+    category: "nonveg",
+    image: "https://lesucresale-doumsouhaib.com/wp-content/uploads/2020/04/p%C3%A2te-tunisienne-%C3%A0-la-sauce-piquante-makrouna.jpg",
+    description:
+      "The wholesome flavour of tandoori masala with Chicken tikka, onion, red paprika & mint mayo",
+     amount:1
+  },
   ];
    

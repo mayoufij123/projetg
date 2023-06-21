@@ -125,3 +125,8 @@ input {
     margin-top: 50px;
     margin-left: -800px;
 }
+
+#parti {
+    margin-left: -2000px;
+    flex-wrap: wrap;
+}

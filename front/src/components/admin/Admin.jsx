@@ -16,7 +16,7 @@ function Admin() {
   const navigate = useNavigate()
   const AddProduit= async(values)=>{
     await PostPizza (values)
-    navigate('/')
+    navigate('/produit non livrable')
 
   }
   const contact=useSelector(state=>state.account)
@@ -53,6 +53,10 @@ getPizza()
     },[])
   return (
     <div className='jk' >
+      <div id='parti' >
+     
+      <a href="#h2">prd</a>
+      </div>
       <div className='ba'>
         <h1 className='h1'>list contact</h1>
     {contact.map((e)=><ListContact contacts={e}  />)}

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { getUniquepizzar } from '../api/pizza'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import './Cart.css'
 
 const Cart = ({cart,setCart,HandelChange}) => {
+  const navigate=useNavigate()
     const [prices,setPrices]=useState(0)
     
  let HandelPrice=()=>{
@@ -18,11 +19,15 @@ const Cart = ({cart,setCart,HandelChange}) => {
     setCart(arr);
     //HandelPrice()
  }
- const PrintBtn= document.getElementById('print')
-PrintBtn.addEventListener('click',function () {
-window.print();
+ //const PrintBtn= document.getElementById('print')
+//PrintBtn.addEventListener('click',function() {
+ // window.print();
 
-})
+//})
+const HabdelVal=()=>{
+  window.location.reload();
+  navigate('/')
+}
  
  useEffect(()=>{
 HandelPrice();
@@ -53,7 +58,9 @@ HandelPrice();
       <span>totalprice</span>
       <span>Rs -{prices}</span>
     </div>
-    <button id ='print'>print commande</button>
+     <button onClick={()=>HabdelVal()}> passer le commande vers livraison</button>
+   
+    
      </article>
   )
 }

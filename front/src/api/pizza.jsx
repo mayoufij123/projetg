@@ -21,3 +21,7 @@ export const PostPizza= async(values)=>{
         const {data}= await axios.get(`http://localhost:5000/api/pizza/getpizza/${id}`,values)
         return data
     }
+    export const Deletepizza = async(id) => {
+        const deletedpizza = await axios.delete(`http://localhost:5000/api/pizza/deletepizza/${id}`)
+    
+    }
