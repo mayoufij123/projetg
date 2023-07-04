@@ -90,6 +90,7 @@ getPizza()
     });
   }}
 />
+<img src="" alt="" />
 
 <input
   type="text"

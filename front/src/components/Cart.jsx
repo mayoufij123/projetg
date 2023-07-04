@@ -19,11 +19,12 @@ const Cart = ({cart,setCart,HandelChange}) => {
     setCart(arr);
     //HandelPrice()
  }
- //const PrintBtn= document.getElementById('print')
-//PrintBtn.addEventListener('click',function() {
- // window.print();
 
-//})
+// const printBtn= document.getElementById("prit");
+// printBtn.addEventListener("click", function(){
+// window.print();
+// })
+
 const HabdelVal=()=>{
   window.location.reload();
   navigate('/')
@@ -52,13 +53,14 @@ HandelPrice();
         </div>
         </div>
         ))}
+        <input type="text" placeholder='adress de livraison' />
 
     
     <div className='pri'>
       <span>totalprice</span>
       <span>Rs -{prices}</span>
     </div>
-     <button onClick={()=>HabdelVal()}> passer le commande vers livraison</button>
+     <button id="prit" type='button' onClick={()=>HabdelVal()}> passer le commande vers livraison</button>
    
     
      </article>

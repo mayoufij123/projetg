@@ -6,7 +6,7 @@ const Navbar = ({size}) => {
   return (
     <div className='nav'>
       <ul>
-      <li><a><Link to={'/'}  >Livrable</Link></a></li>
+      <li><a><Link to={'/'}  >Livrable</Link><span>58238048</span></a></li>
       <li><a><Link to={'/produit non livrable'}  >Pizza</Link></a></li>
      
        <li><a><Link to={'/reg'}  >Register</Link></a></li>
